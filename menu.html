@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Đơn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+    <div id="app">
+        <div id="container">
+            <!-- header -->
+            <header id="header">
+                <div class="wrapper">
+                        <div class="header__logo">
+                            <a href="/" >
+                                <img class="logo-img" src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/BrandFresh/logonew/HLC_Logo_New_cream_logo.png">
+                            </a>
+                        </div>
+                        <div class="header-right">
+                            <div class="header-search">
+                                <div class="search-bar">
+                                    <input type="text" class="search-input" placeholder="Từ khóa">
+                                </div>
+                            </div>
+
+                            <div class="header-navi">
+                                <ul>
+                                <li class="navi-btn"><a class="navi-store" href="html/store.html">Quán cà phê</a></li>
+                                <li class="navi-btn nav-active"><a class="navi-menu" href="/menu.html">
+                                    <p>Thực đơn</p></a>
+                                    <div class="menu-subnav">
+                                        <ul class="wrapper row">
+                                        <li class="col-3 menu-subnav__list">
+                                            <ul>
+                                                <li><a class="list-header">Cà phê</a></li>
+                                                <li><a class="list-item">cà phê phin</a></li>
+                                                <li><a class="list-item">PhinDi</a></li>
+                                                <li><a class="list-item">Cà phê Espresso</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="col-3 menu-subnav__list">
+                                            <ul>
+                                            <li><a class="list-header">Freeze</a></li>
+                                            <li><a class="list-item">Freeze cà phê phin</a></li>
+                                            <li><a class="list-item">Freeze không cà phê</a></li>
+                                        </ul>
+                                        </li>
+                                        <li class="col-3 menu-subnav__list">
+                                            <ul>
+                                            <li><a class="list-header">Trà</a></li>
+                                            <li><a class="list-item">Trà sen vàng mới</a></li>
+                                            <li><a class="list-item">Trà thạch đào</a></li>
+                                            <li><a class="list-item">Trà thạch vải</a></li>
+                                            <li><a class="list-item">Trà thanh đào</a></li>
+                                            <li><a class="list-item">Trà nhiệt đới</a></li>
+                                        </ul>
+                                        </li>
+                                        <li class="col-3 menu-subnav__list">
+                                            <ul>
+                                            <li><a class="list-header">Khác</a></li>
+                                            <li><a class="list-item">Bánh ngọt</a></li>
+                                            <li><a class="list-item">Merchandise</a></li>
+                                            <li><a class="list-item">Cà phê đóng gói</a></li>
+                                            <li><a class="list-item">Thực đơn giao hàng</a></li>
+
+                                        </ul>
+                                        </li>
+                                    </ul>
+                                    </div>
+                                </li>
+                                <li class="navi-btn"><a class="navi-news" href="html/store.html">Tin tức</a></li>
+                                <li class="navi-btn"><a class="navi-comunity" href="html/store.html">Cộng đồng</a></li>
+                                <li class="navi-btn"><a class="navi-about" href="html/store.html">Về chúng tôi</a></li>
+                                <li class="navi-btn"><a class="navi-career" href="html/store.html">Nghề nghiệp</a></li>
+                                <li class="navi-btn"><a class="navi-shop" href="html/store.html">Mua ngay</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                </div>
+            </header>
+
+            <!-- banner  -->
+            <div id="menu-body" href="/product.html" class="container-fluid">
+                <a href="/product.html">
+                <div class="cafe-banner menu-banner">
+                    <div class="wrapper">
+                        <div class="cafe-descript">
+                            <div class="title menu-title">Cà phê</div>
+                            <div class="info">Sự kết hợp hoàn hảo giữa hạt cà phê Robusta & Arabica thượng hạng được trồng trên những vùng cao nguyên Việt Nam màu mỡ, qua những bí quyết rang xay độc đáo, Highlands Coffee chúng tôi tự hào giới thiệu những dòng sản phẩm Cà phê mang hương vị đậm đà và tinh tế.</div>
+                            <a href="/product.html" class="menu-btn">Khám phá thêm</a>
+                        </div>
+                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/11_2022/BR_Drink/Products6.png" alt="" class="menu-img cafe-img">
+                    </div>
+                </div>
+
+                <div class="freeze-banner menu-banner">
+                    <div class="wrapper">
+                        <div class="freeze-descript">
+                            <div class="title menu-title">freeze</div>
+                            <div class="info">Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh được pha chế từ những nguyên liệu thuần túy của Việt Nam.
+                            </div>
+                            <a href="/product.html" class="menu-btn">Khám phá thêm</a>
+                        </div>
+                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/11_2022/BR_Drink/HLC_New_logo_Products__FREEZE_TRA_XANH.png" alt="" class="menu-img freeze-img">
+                    </div>
+                </div>
+
+                <div class="tee-banner menu-banner">
+                    <div class="wrapper">
+                        <div class="tee-descript">
+                            <div class="title menu-title">tea</div>
+                            <div class="info">Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh được pha chế từ những nguyên liệu thuần túy của Việt Nam.
+                            </div>
+                            <a href="/product.html" class="menu-btn">Khám phá thêm</a>
+                        </div>
+                        <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/11_2022/BR_Drink/HLC_New_logo_Products__TRA_SEN_VANG_CU_NANG.png" alt="" class="menu-img tee-img">
+                    </div>
+                </div>
+            </a>
+            </div>
+
+            <footer class="footer menu-footer"></footer>
+        </div>
+    </div>
+
+
+</body>
+</html>

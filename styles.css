@@ -1,0 +1,813 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+button {
+    border: none;
+}
+
+#container {
+    max-width: 100%;
+}
+
+/* Header */
+
+#header{
+    border-top: solid 10px #53382c;
+    background: #b22830;
+    padding: 14px 0px 12px;
+    position: relative;
+    width: 100%;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.logo-img {
+    width: 110px;
+    height: 85px;
+    margin-right: 90px;
+}
+
+.header-right {
+    margin-bottom: -12px;
+}
+
+.header-search {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.search-bar {
+    width: 260px;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 30px;
+    border: none;
+}
+
+
+.header-navi > ul {
+    display: flex;
+}
+
+.navi-btn {
+    margin-right: 10px;
+    font-size: 1.4rem;
+    line-height: 25px;
+    font-weight: 600;
+    padding: 10px 17px 8px;
+    text-transform: uppercase;
+}
+
+.nav-active {
+    background-color: #53382c;
+}
+
+.navi-btn:hover {
+    background-color: #53382c;
+}
+
+.navi-btn:hover .menu-subnav {
+    display: block;
+}
+
+.menu-subnav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #53382c;
+    padding: 15px 0;
+    z-index: 100;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    display: none;
+    text-align: center;
+}
+
+.list-header {
+    color: #f1bc7a;
+    font-size: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.4rem;
+    line-height: 22px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+/* body  */
+
+.container-fluid {
+    padding: 0;
+}
+
+.col-a {
+    padding: 0;
+    position: relative;
+    color: #fff;
+}
+
+.col-b {
+    background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/weblink/BrandFresh/News_Banner.jpg');
+    padding: 55px 15px 45px;
+}
+
+.footer-img, .home-banner__img,
+.table-item__img {
+    width: 100%;
+    height: auto;
+}
+
+.table-news {
+    padding-left: 100px;
+    max-width: 585px;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.table-header {
+    justify-content: space-between;
+    color: #53382c;
+    margin-bottom: 15px;
+}
+
+.table-header,
+.see-all, .table-item {
+    display: flex;
+    align-items: center;
+}
+
+.new-header, .title {
+    font-size: 2.6rem;
+    line-height: 34px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.see-all {
+    font-weight: 600;
+}
+
+.see-all > a {
+    color: #53382c;
+    text-decoration: underline;
+    margin: 0;
+    margin-right: 4px;
+    font-size: 1.3rem;
+}
+
+.table-item {
+    margin-bottom: 10px;
+}
+
+.table-item__thumb {
+    width: 120px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.table-item__img {
+    transition: scale linear .3s;
+}
+
+.table-item__img:hover {
+    scale: 1.1;
+}
+
+.new-info, .info-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.info-date {
+    font-size: 1.3rem;
+}
+
+.new-header {
+    position: absolute;
+    top: 16%;
+    left: 38%;
+}
+
+.new-info {
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    width: 35%;
+    font-size: 2rem;
+}
+
+.new-name, .new-address {
+    margin-bottom: 10px;
+}
+
+/* menu html  */
+
+#menu-content {
+    cursor: pointer;
+}
+
+.cafe-banner {
+    color: #faebd7;
+    background-image: url(https://www.highlandscoffee.com.vn/vnt_upload/product/04_2018/menu-PSD-bg.jpg);
+    z-index: 1;
+    border-color: #faebd7;
+}
+
+.menu-banner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 340px;
+    background-size: cover;
+    padding: 50px 0;
+    position: relative;
+}
+
+.cafe-descript, .freeze-descript, .tee-descript {
+    width: 50%;
+    -webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-bottom {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(500px);
+              transform: translateZ(-700px) translateY(500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand-fwd-bottom {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(500px);
+              transform: translateZ(-700px) translateY(500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+
+.menu-title {
+    margin-bottom: 20px;
+    font-size: 4.5rem;
+    animation-delay: .3s;
+}
+
+.info {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.menu-btn {
+    padding: 7px 70px;
+    border: solid 1px;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+.menu-img {
+    width: 50%;
+    position: absolute;
+}
+
+.cafe-img {
+    right: 4%;
+    top: -61%;
+}
+
+.freeze-banner {
+    background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/product/04_2018/menu-FREEZE.jpg');
+    color: #006400;
+    z-index: 2;
+    border-color: #006400;
+}
+
+.freeze-descript {
+    margin-left: auto;
+    text-align: right;
+}
+
+.freeze-img {
+    bottom: -135%;
+}
+
+.tee-banner {
+    background-image: url('https://www.highlandscoffee.com.vn/vnt_upload/product/11_2022/Banner/Product_Tra_BG_Web_Banner.jpg');
+    color: #fff;
+    z-index: 3;
+    border-color: #fff;
+}
+
+.tee-img {
+    top: -100%;
+    right: 0;
+}
+
+.footer {
+    background: #53382c;
+    padding: 18px 25px 18px 0;
+}
+
+.menu-footer {
+    height: 111px;
+}
+
+/* product page  */
+.titleP {
+    font-size: 3.5rem;
+    line-height: 55px;
+    font-weight: 500;
+    text-align: left;
+    color: #53382c;
+    text-transform: uppercase;
+}
+
+.product-info {
+    font-size: 1.4rem;
+    color: #333333;
+}
+
+.product-body {
+    margin-top: 95px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.product-slider {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    margin: 0 -15px 20px;
+    transition: height 0.2s;
+
+}
+
+.slider-item {
+    position: absolute;
+    height: auto;
+    transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out, z-index 0s linear 0.25s;
+    width: 33.33%;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 40px;
+    padding: 0 15px;
+}
+
+.slider-item__thumb {
+    position: relative;
+    overflow: hidden;
+    border: solid 1px #eeeeee;
+    margin-bottom: 20px;
+    height: 264px;
+}
+
+.slider-item__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 80%;
+    max-height: 80%;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.slider-item__img:hover {
+    scale: 1.1;
+}
+
+.slider-item__title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #53382c;
+    font-weight: 700;
+}
+
+.slider-item__price {
+    text-align: center;
+    font-size: 16px;
+}
+
+.price-number {
+    color: #53382c;
+    font-weight: 700;
+}
+
+.next {
+    transform: translateX(100%);
+}
+
+.next,
+.previous,
+.selected {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider-wrapper {
+    position: relative;
+    margin-top: 260px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: -232px;
+    width: 32px;
+    height: 32px;
+    font-size: 2rem;
+    color: #111;
+    font-weight: 300;
+}
+
+.next-btn {
+    right: 0%;
+}
+
+.prev-btn {
+    right: 4.5%;
+}
+
+.previous {
+    transform: translateX(-100%);
+}
+
+.selected {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 10;
+}
+
+.last {
+    transform: translateX(20%);
+}
+
+.buy-container {
+    margin: 12px 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+.buy-btn {
+    font-size: 1.8rem;
+    padding: 4px 20px;
+    background-color: #b22830;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+#modal {
+    position: fixed;
+    top: 172px;
+    right: 212px;
+    left: 1220px;
+    height: fit-content;
+    max-height: 660px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: none;
+}
+
+.modal-header {
+    font-size: 2rem;
+}
+
+.modal-item, .cart-body, .left-btn, .checkout-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkout-item {
+    height: 80px;
+
+}
+
+.modal-item__thumb, .checkout-item__thumb {
+    position: relative;
+    width: 100px;
+    height: 84px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-right: 16px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 28px 30px 0px;
+}
+
+.checkout-item__thumb {
+    height: 80px;
+    width: 80px;
+}
+
+.modal-item__img, .checkout-item__img {
+    width: 100%;
+    height: auto;
+}
+
+.modal-body {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.modal-item__info {
+    width: 100%;
+}
+
+.cart-right, .total-price {
+    text-align: end;
+    color: #b22830;
+    padding-right: 16px;
+}
+
+.close-tag {
+    cursor: pointer;
+}
+
+.delete-btn {
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.item-name {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.cart-body {
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+.minus-btn, .num-btn, .plus-btn {
+    font-size: 1.4rem;
+    width: 28px;
+    height: 28px;
+    border: solid 1px #dee2e6;
+    text-align: center;
+    line-height: 28px;
+    padding: 0;
+    border-radius: 0;
+}
+
+.num-btn {
+    border-left: none;
+    border-right: none;
+}
+
+.modal-footer {
+    display: block;
+}
+
+.modal-total {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-checkout {
+    width: 100%;
+    background-color: #b22830;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal-item + .modal-item,
+.checkout-item + .checkout-item {
+    margin-top: 10px;
+}
+
+/* check out page */
+
+.checkout-left, .checkout-right {
+    min-height: 500px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border: #dee2e6 solid 1px;
+}
+
+.left-form, .right-form {
+    padding: 0 14px;
+}
+
+.form-header {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.form-floating {
+    padding: 6px;
+    font-size: 1.4rem;
+}
+
+
+.checkout-logo {
+    margin: 16px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.form-message {
+    color: #b22830;
+    font-size: 1.2rem;
+}
+
+.checkout-right {
+    padding: 28px 14px 28px 28px;
+}
+
+.checkout-item__info, .checkout-item__price {
+    font-size: 1.6rem;
+    color: #333;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.checkout-item__info {
+    flex: 1;
+}
+
+.checkout-item__num {
+    position: absolute;
+    top: 1px;
+    right: -8px;
+    color: #FFFFFF;
+    background-color: #000;
+    border-radius: 999px;
+    text-align: center;
+    padding: 0 8px;
+    font-size: 1.4rem;
+}
+
+#header-checkout {
+    border-top: none;
+    background: transparent;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#header-checkout::after {
+    content: '';
+    height: 1px;
+    width: 111%;
+    
+    position: absolute;
+    right: -14px;
+    left: -28px;
+    bottom: -16px; 
+    
+    background-color: #dee2e6;
+}
+
+.right-body {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 16px;;
+}
+
+.right-discount {
+    padding: 20px 0;
+}
+
+.right-discount::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    
+    position: absolute;
+    top: 0; 
+    
+    background-color: #dee2e6;
+}
+
+.right-discount::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    
+    position: absolute;
+    bottom: 0; 
+    
+    background-color: #dee2e6;
+}
+
+.discount-button {
+    background-color: #b22830;
+    color: #fff;
+}
+
+.order-summary {
+    position: relative;
+}
+
+.order-summary::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    
+    position: absolute;
+    bottom: -10px; 
+    
+    background-color: #dee2e6;
+}
+
+.checkout-total {
+    padding-top: 10px;
+}
+
+.total-num {
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.order-section {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    font-size: 1.4rem;
+    color: #717171;
+}
+
+.order-btn {
+    padding: 6px 12px;
+    background-color: #b22830;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    float: right;
+    margin-top: 10px;
+}
