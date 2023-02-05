@@ -30,6 +30,73 @@
                                 </div>
                             </div>
 
+                            <button class="menu-mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                <i class="fa-solid fa-list-ul"></i>
+                            </button>
+                            <div class="offcanvas offcanvas-end offcanvas-mobile" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+
+                                  <button type="button" class="text-reset mobile-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                  </button>
+                              
+                                    <ul class="list-group">
+                                        <li class="navi-btn"><a class="navi-store" href="html/store.html">Quán cà phê</a></li>
+                                        <li class="navi-btn"><a class="navi-menu" href="/menu.html">
+                                            <p>Thực đơn</p></a>
+                                        <button class="mobile-menu__btn">
+                                            <i class="fa-solid fa-angle-right icon-right"></i>
+                                            <i class="icon-down fa-solid fa-angle-down"></i>
+                                        </button>
+                                        <li>
+                                            <ul class="list-group list-group-2">
+                                                <li>Cà phê
+                                                    <button class="mobile-menu__btn">
+                                                        <i class="fa-solid fa-angle-right icon-right"></i>
+                                                        <i class="icon-down fa-solid fa-angle-down"></i>
+                                                    </button>
+                                                    <ul class="list-group list-group-3">
+                                                        <li>Cà phê phin</li>
+                                                        <li>PhinDi</li>
+                                                        <li>Cà phê Espresso</li>
+                                                    </ul>
+                                                </li>
+                                                <li>freeze
+                                                    <button class="mobile-menu__btn">
+                                                        <i class="fa-solid fa-angle-right icon-right"></i>
+                                                        <i class="icon-down fa-solid fa-angle-down"></i>
+                                                    </button>
+                                                    <ul class="list-group list-group-3">
+                                                        <li>freeze cà phê phin</li>
+                                                        <li>freeze không cà phê</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Trà
+                                                    <button class="mobile-menu__btn">
+                                                        <i class="fa-solid fa-angle-right icon-right"></i>
+                                                        <i class="icon-down fa-solid fa-angle-down"></i>
+                                                    </button>
+                                                    <ul class="list-group list-group-3">
+                                                        <li>Trà sen vàng</li>
+                                                        <li>Trà đào cam xả</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Khác
+                                                    <button class="mobile-menu__btn">
+                                                        <i class="fa-solid fa-angle-right"></i>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        </li>
+                                        <li class="navi-btn"><a class="navi-news" href="html/store.html">Tin tức</a></li>
+                                        <li class="navi-btn"><a class="navi-comunity" href="html/store.html">Cộng đồng</a></li>
+                                        <li class="navi-btn"><a class="navi-about" href="html/store.html">Về chúng tôi</a></li>
+                                        <li class="navi-btn"><a class="navi-career" href="html/store.html">Nghề nghiệp</a></li>
+                                        <li class="navi-btn"><a class="navi-shop" href="/checkout.html">Mua ngay</a></li>
+                                    </ul>
+
+                              </div>
+
                             <div class="header-navi">
                                 <ul>
                                 <li class="navi-btn"><a class="navi-store" href="html/store.html">Quán cà phê</a></li>
@@ -376,8 +443,10 @@
                                             <img src=${item.path} alt="" class="slider-item__img">
                                         </div>
                                         <div class="slider-item__body">
-                                            <div class="slider-item__title">${item.title}</div>
-                                            <div class="slider-item__price">Giá: ${item.price} VNĐ</div>
+                                            <div>
+                                                <div class="slider-item__title">${item.title}</div>
+                                                <div class="slider-item__price">Giá: ${item.price} VNĐ</div>
+                                            </div>
                                             <div class='buy-container'>
                                             <button class='buy-btn' value=${item.id}>BUY</button>
                                             </div>
@@ -394,8 +463,10 @@
                                             <img src=${item.path} alt="" class="slider-item__img">
                                         </div>
                                         <div class="slider-item__body">
-                                            <div class="slider-item__title">${item.title}</div>
-                                            <div class="slider-item__price">Giá: ${item.price} VNĐ</div>
+                                            <div>
+                                                <div class="slider-item__title">${item.title}</div>
+                                                <div class="slider-item__price">Giá: ${item.price} VNĐ</div>
+                                            </div>
                                             <div class='buy-container'>
                                             <button class='buy-btn' value=${item.id}>BUY</button>
                                             </div>
@@ -412,8 +483,10 @@
                                             <img src=${item.path} alt="" class="slider-item__img">
                                         </div>
                                         <div class="slider-item__body">
-                                            <div class="slider-item__title">${item.title}</div>
-                                            <div class="slider-item__price">Giá: ${item.price} VNĐ</div>
+                                            <div>
+                                                <div class="slider-item__title">${item.title}</div>
+                                                <div class="slider-item__price">Giá: ${item.price} VNĐ</div>
+                                            </div>
                                             <div class='buy-container'>
                                             <button class='buy-btn' value=${item.id}>BUY</button>
                                             </div>
