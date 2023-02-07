@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </head>
 <body>
-    <div id="app">
+    <div id="app = [
+    Haoi:]">
         <div class="container">
             <div class="row g-0">
                 <div class="col-sm-6 col-md-8 checkout-left">
@@ -45,31 +46,22 @@
                                     <div class="form-message"></div>
                                 </div>
                                 <div class="form-floating">
-                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <select class="form-select city" id="floatingSelect" aria-label="Floating label select example">
                                       <option selected>---</option>
-                                      <option value="1">Hà Nội</option>
-                                      <option value="2">TP.HCM</option>
-                                      <option value="3">Đà Nẵng</option>
+                                      <option value="hanoi">Hà Nội</option>
+                                      <option value="tphcm">TP.HCM</option>
+                                      <option value="danang">Đà Nẵng</option>
                                     </select>
                                     <label for="floatingSelect">Tỉnh thành</label>
                                 </div>
                                 <div class="form-floating">
-                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <select class="form-select district" id="floatingSelect" aria-label="Floating label select example">
                                       <option selected>---</option>
                                       <option value="1">One</option>
                                       <option value="2">Two</option>
                                       <option value="3">Three</option>
                                     </select>
                                     <label for="floatingSelect">Quận huyện</label>
-                                </div>
-                                <div class="form-floating">
-                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                      <option selected>---</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
-                                    </select>
-                                    <label for="floatingSelect">Phường xã</label>
                                 </div>
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
@@ -79,6 +71,20 @@
                         </div>
                         <div class="col-6 form-right">
                             <header class="form-header">Vận chuyển</header>
+                            <div class="form-check checkout-check">
+                                <input class="form-check-input check-input" type="checkbox" name="exampleRadios" id="shipping-check" value="option1">
+                                <label class="form-check-label" for="shipping-check">
+                                  Giao hàng tận nơi
+                                </label>
+                                <span class="check-shipping__price"></span>
+                            </div>
+                            <header class="form-header">Thanh toán</header>
+                            <div class="form-check checkout-check">
+                                <input class="form-check-input" type="checkbox" name="exampleRadios" id="shipping-check" value="option1" checked>
+                                <label class="form-check-label" for="shipping-check">
+                                  Thanh toán khi nhận hàng
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,13 +126,13 @@
                         </div>
                         <div class="order-section shipping">
                             Phí vận chuyển
-                            <span class="shipping-num">50000</span>
+                            <span class="shipping-num"></span>
                         </div>
                     </div>
                     <div class="checkout-total">
                         <div class="order-section total">
                             Tổng cộng
-                            <span class="total-num">24930000</span>
+                            <span class="total-num">---</span>
                         </div>
                         <button class="btn order-btn">Đặt hàng</button>
                     </div>
@@ -144,6 +150,80 @@
         const header = $('#header-checkout')
         const subTotalCheckout = $('.subtotal-num')
         const totalCheckout = $('.total-num')
+        const city = $('.city')
+        const district = $('.district')
+        const shippingCost = $('.shipping-num')
+        const checkBox = $('.check-input')
+        const inputPrice = $('.check-shipping__price')
+
+        
+        const app = {
+            hanoi: [
+                'Ba Đình',
+                'Bắc Từ Liêm',
+                'Cầu Giấy',
+                'Đống Đa',
+                'Hà Đông',
+                'Hai Bà Trưng',
+                'Hoàn Kiếm',
+                'Hoàng Mai',
+                'Long Biên',
+                'Nam Từ Liêm',
+                'Tây Hồ',
+                'Thanh Xuân',
+            ],
+            tphcm: [
+                'Thành phố Thủ Đức',
+                'Quận 1',
+                'Quận 3',
+                'Quận 4',
+                'Quận 5',
+                'Quận 6',
+                'Quận 7',
+                'Quận 8',
+                'Quận 10',
+                'Quận 11',
+                'Quận 12',
+                'Quận Bình Tân',
+                'Quận Bình Thạnh',
+                'Quận Tân Bình',
+            ],
+            danang: [
+                'Huyện Hoàng Sa',
+                'Huyện Hoà Vang',
+                'Quận Thanh Khê',
+                'Quận Sơn Trà',
+                'Quận Ngũ Hành Sơn',
+                'Quận Liên Chiểu',
+                'Quận Hải Châu',
+                'Quận Cẩm Lệ',
+            ],
+        }
+
+        let inputRender = null
+        let shipPrice = 0
+
+        city.onchange = function () {
+            inputRender = app[city.value]
+            if (city.value === 'danang') {
+                shipPrice = 40000
+            } else {
+                shipPrice = 30000
+            }
+            renderInput()
+            render()
+        }
+
+        function renderInput () {
+            const inputHtml = inputRender.map(item => {
+                return `
+                    <option value=${item}>${item}</option>
+                `
+            })
+            district.innerHTML = inputHtml
+        }
+
+
 
         function Validator (options) {
     
@@ -286,11 +366,20 @@ const render = function() {
              
         })
 
+        inputPrice.innerText = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'VND' }).format(shipPrice)
+
+        checkBox.onchange = function() {
+            shippingCost.innerText = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'VND' }).format(shipPrice)
+        }
+   
+
         const formatSubTotal = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'VND' }).format(subTotal)
+        totalCheckout.innerText = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'VND' }).format(subTotal + shipPrice)
+
+
 
             header.innerText = `Đơn hàng (${totalItems} đơn hàng) ` 
             subTotalCheckout.innerText = `${formatSubTotal}`
-            totalCheckout.innerText = `${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'VND' }).format(subTotal + 50000)}`
 
             const checkoutHtmls = list.map(item => {
                 return `
