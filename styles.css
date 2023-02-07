@@ -264,6 +264,56 @@ button {
     border-color: #faebd7;
 }
 
+.origin-banner {
+    background-color: url(https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-CAREER3.jpg);
+    border-color: #faebd7;
+    padding: 0 !important;
+    max-height: 50vh;
+}
+
+.origin-banner .cafe-descript {
+    margin-top: 40px;
+}
+
+.origin-banner a, .origin-banner .info {
+    color: #333333;
+    font-size: 1.4rem;
+}
+
+.origin-img {
+    height: 100%;
+    max-width: 50%;
+    position: relative;
+    -webkit-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-delay: 0.3s;
+    animation-name: fadeIn;
+}
+
+.origin-img img {
+    width: 100%;
+    height: auto;
+}
+
+
+.origin-img:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 59%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
 .menu-banner {
     background-position: center center;
     background-repeat: no-repeat;
@@ -1115,6 +1165,10 @@ button {
     margin: 20px 0 60px;
     text-align: center;
 
+}
+
+.new-body {
+    margin-bottom: 20px;
 }
 
 .new-btn {
