@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </head>
 <body>
-    <div id="app = [
-    Haoi:]">
+    <div id="app">
         <div class="container">
             <div class="row g-0">
                 <div class="col-sm-6 col-md-8 checkout-left">
@@ -134,11 +133,18 @@
                             Tổng cộng
                             <span class="total-num">---</span>
                         </div>
-                        <button class="btn order-btn">Đặt hàng</button>
+                        <div class="checkout-right__footer">
+                            <a href="/product.html" class="back">
+                                <i class="fa-solid fa-angle-left icon-left"></i>
+                                Quay trở về giỏ hàng
+                            </a>
+                            <button class="btn order-btn">Đặt hàng</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <footer class="footer menu-footer"></footer>
     </div>
 
     <script>
@@ -404,5 +410,7 @@ const render = function() {
 render()
 
     </script>
+    <script src="/code.js"></script>
+
 </body>
 </html>

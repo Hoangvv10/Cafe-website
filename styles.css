@@ -37,12 +37,16 @@ button {
 
 /* Header */
 
-#header{
+#header {
     border-top: solid 10px #53382c;
     background: #b22830;
     padding: 14px 0px 12px;
     position: relative;
     width: 100%;
+}
+
+#header a {
+    padding: 10px 17px 8px;
 }
 
 .wrapper {
@@ -71,13 +75,13 @@ button {
 }
 
 .header-search {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 15px;
+    position: absolute;
+    right: 85px;
+    top: 20px;
 }
 
 .search-bar {
-    width: 260px;
+    width: 350px;
     position: relative;
 }
 
@@ -87,8 +91,26 @@ button {
     padding-left: 10px;
     padding-right: 30px;
     border: none;
+    font-size: 1.4rem;
+    outline-style: none;
 }
 
+.search-input::-webkit-input-placeholder { 
+    font-size: 1.4rem;
+}
+  
+.search-input:-ms-input-placeholder {
+    font-size: 1.4rem;
+  }
+  
+.search-input::placeholder {
+    font-size: 1.4rem;
+}
+
+.header-navi {
+    position: absolute;
+    bottom: -12px;
+}
 
 .header-navi > ul {
     display: flex;
@@ -99,8 +121,9 @@ button {
     font-size: 1.4rem;
     line-height: 25px;
     font-weight: 600;
-    padding: 10px 17px 8px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
 .nav-active {
@@ -858,6 +881,30 @@ button {
     color: #717171;
 }
 
+.checkout-right__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.back {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.back:hover {
+    color: #333;
+}
+
+.icon-left {
+    transition: all .3s ease-in;
+}
+
+.back:hover .icon-left {
+    transform: translateX(-40%);
+}
+
 .order-btn {
     padding: 6px 12px;
     background-color: #b22830;
@@ -865,8 +912,6 @@ button {
     border-radius: 4px;
     font-size: 1.6rem;
     font-weight: 500;
-    float: right;
-    margin-top: 10px;
 }
 
 
@@ -1218,4 +1263,13 @@ button {
 
 .checkout-check label {
     line-height: 1;
+}
+
+.rick-roll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 30px;
+    z-index: 10;
 }
